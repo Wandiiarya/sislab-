@@ -1,76 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Skydash Admin</title>
-    <!-- plugins:css -->
-    <link rel="stylesheet" href="{{asset('assets/vendors/feather/feather.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/vendors/ti-icons/css/themify-icons.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/vendors/css/vendor.bundle.base.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/vendors/font-awesome/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/vendors/mdi/css/materialdesignicons.min.css')}}">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- <link rel="stylesheet" href="{{asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css')}}"> -->
-   <link rel="stylesheet" href="{{asset('assets/vendors/ti-icons/css/themify-icons.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/js/select.dataTables.min.css')}}">
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.bootstrap5.css')}}">
-    <link href="{{ asset('asset/css/style.css') }}" rel="stylesheet">
-
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-    <!-- endinject -->
-    <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" />
-</head>
-
-<body>
-    <div class="container-scroller">
-
-        <!-- partial:partials/_navbar.html -->
-        @include('layouts.admin.navbar')
-        <!-- partial -->
-        <div class="container-fluid page-body-wrapper">
-            <!-- partial:partials/_sidebar.html -->
-
-            @include('layouts.admin.sidebar')
-            <!-- partial -->
-            <div class="main-panel">
-          <div class="content-wrapper">
-            @yield('content')
-          </div>
-
-            <!-- main-panel ends -->
-        </div>
-        <!-- page-body-wrapper ends -->
-    </div>
-    <!-- container-scroller -->
-    <!-- plugins:js -->
-    <script src="{{asset('assets/vendors/js/vendor.bundle.base.js')}}"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-    <script src="{{asset('assets/vendors/chart.js/chart.umd.js')}}"></script>
-    <script src="{{asset('assets/vendors/datatables.net/jquery.dataTables.js')}}"></script>
-    <!-- <script src="{{asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js')}}"></script> -->
-    <script src="{{asset('assets/vendors/datatables.net-bs5/dataTables.bootstrap5.js')}}"></script>
-    <script src="{{asset('assets/js/dataTables.select.min.js')}}"></script>
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
-    <script src="{{asset('assets/js/off-canvas.js')}}"></script>
-    <script src="{{asset('assets/js/template.js')}}"></script>
-    <script src="{{asset('assets/js/settings.js')}}"></script>
-    <script src="{{asset('assets/js/todolist.js')}}"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page-->
-    <script src="{{asset('assets/js/jquery.cookie.js')}}" type="text/javascript"></script>
-    <script src="{{asset('assets/js/dashboard.js')}}"></script>
-    <!-- <script src="{{asset('assets/js/Chart.roundedBarCharts.js')}}"></script> -->
-    <!-- End custom js for this page-->
-    @include('sweetalert::alert')
-    @stack('scripts')
-</body>
-
 </html>
+<!DOCTYPE html>
+
+<html
+  lang="en"
+  class="light-style layout-menu-fixed layout-compact"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="{{asset('assets/')}}"
+  data-template="vertical-menu-template-free">
+  <head> 
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>sislab</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon/1669103641950 1.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="{{asset('assets/vendor/fonts/boxicons.css')}}" />
+ <link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.bootstrap5.css')}}">
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="{{asset('assets/vendor/css/core.css')}}" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="{{asset('assets/vendor/css/theme-default.css')}}" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="{{asset('assets/css/demo.css')}}" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/vendor/libs/apex-charts/apex-charts.css')}}" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="{{asset('assets/vendor/js/helpers.js')}}"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="{{asset('assets/js/config.js')}}"></script>
+  </head>
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+               @include('layouts.admin.sidebar')
+
+        <!-- / Menu -->
+
+        <!-- Layout container -->
+        <div class="layout-page">
+          <!-- Navbar -->
+          @include('layouts.admin.navbar')
+          <!-- / Navbar -->
+
+          <!-- Content wrapper -->
+        @yield('content')
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+
+    <script src="{{asset('assets/vendor/libs/jquery/jquery.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/popper/popper.js')}}"></script>
+    <script src="{{asset('assets/vendor/js/bootstrap.js')}}"></script>
+    <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js')}}"></script>
+    <script src="{{asset('assets/vendor/js/menu.js')}}"></script>
+
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="{{asset('assets/vendor/libs/apex-charts/apexcharts.js')}}"></script>
+
+    <!-- Main JS -->
+    <script src="{{asset('assets/js/main.js')}}"></script>
+
+    <!-- Page JS -->
+    <script src="{{asset('assets/js/dashboards-analytics.js')}}"></script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js')}}"></script>
+     @include('sweetalert::alert')
+    @stack('scripts')
+  </body>
+</html>
+
+
+

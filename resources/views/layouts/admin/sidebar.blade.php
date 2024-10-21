@@ -1,66 +1,136 @@
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
-  <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('home') }}">
-        <i class="icon-grid menu-icon"></i>
-        <span class="menu-title">Dashboard</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-        <i class="icon-layout menu-icon"></i>
-        <span class="menu-title">Tabel</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div class="collapse" id="ui-basic">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="{{ route('ruangan.index') }}">Ruangan</a></li>
-          <li class="nav-item"> <a class="nav-link" href="{{ route('barang.index') }}">Barang</a></li>
-          <li class="nav-item"> <a class="nav-link" href="{{ route('merk.index') }}">Merk</a></li>
-          <li class="nav-item"> <a class="nav-link" href="{{ route('kondisi.index') }}">Kondisi</a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-        <i class="icon-columns menu-icon"></i>
-        <span class="menu-title">Peminjaman</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div class="collapse" id="form-elements">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item"><a class="nav-link" href="{{ route('pm_barang.index') }}">Peminjaman Barang</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ route('pm_ruangan.index') }}">Peminjaman Ruangan</a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-        <i class="icon-bar-graph menu-icon"></i>
-        <span class="menu-title">Maintenance</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div class="collapse" id="charts">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="{{ route('m_barang.index') }}">Maintenance Barang</a></li>
-          <li class="nav-item"> <a class="nav-link" href="{{ route('m_barang.index') }}">Maintenance Barang</a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-        <i class="icon-grid-2 menu-icon"></i>
-        <span class="menu-title">Tables</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div class="collapse" id="tables">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="{{ route('l_barang.index') }}">Peminjaman Barang</a></li>
-          <li class="nav-item"> <a class="nav-link" href="{{ route('l_ruangan.index') }}">Peminjaman Ruangan</a></li>
-          <li class="nav-item"> <a class="nav-link" href="{{ route('lm_barang.index') }}">Maintenance Barang</a></li>
-          <li class="nav-item"> <a class="nav-link" href="{{ route('lm_ruangan.index') }}">Maintenance Ruangan</a></li>
-        </ul>
-      </div>
-    </li>
-  </ul>
-</nav>
+     <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+          <div class="app-brand demo">
+            <a href="{{ route('home') }}" class="app-brand-link">
+              <span class="app-brand-logo demo">
+                <img src="{{asset('assets/img/group 7.png')}}" alt="">
+             </span>
+               </a>
+
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+              <i class="bx bx-chevron-left bx-sm align-middle"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <!-- Dashboards -->
+            <li class="menu-item">
+              <a
+                href="{{ route('home') }}"
+               
+                class="menu-link">
+                <i class="menu-icon tf-icons bx bx-envelope"></i>
+                <div data-i18n="Email">dasboard</div>
+                
+              </a>
+            </li>
+
+           
+            <!-- Apps -->
+            
+           
+            <!-- Pages -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div data-i18n="Account Settings">table</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="{{ route('ruangan.index') }}" class="menu-link">
+                    <div data-i18n="Account">ruangan</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="{{ route('barang.index') }}" class="menu-link">
+                    <div data-i18n="Notifications">barang</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="{{ route('merk.index') }}" class="menu-link">
+                    <div data-i18n="Connections">merk</div>
+                  </a>
+                </li>
+                 <li class="menu-item">
+                  <a href="{{ route('kondisi.index') }}" class="menu-link">
+                    <div data-i18n="Connections">kondisi</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                <div data-i18n="Authentications">peminjaman</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="{{ route('pm_barang.index') }}" class="menu-link" >
+                    <div data-i18n="Basic">peminjaman barang</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="{{ route('pm_ruangan.index') }}" class="menu-link" >
+                    <div data-i18n="Basic">peminjaman ruangan</div>
+                  </a>
+                </li>
+                
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                <div data-i18n="Misc">maintenance</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="{{ route('m_barang.index') }}" class="menu-link">
+                    <div data-i18n="Error">maintenance barang</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="{{ route('pm_ruangan.index') }}" class="menu-link">
+                    <div data-i18n="Under Maintenance"> Maintenance ruangan</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-box"></i>
+                <div data-i18n="User interface">laporan</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="{{ route('l_barang.index') }}" class="menu-link">
+                    <div data-i18n="Accordion">leporan peminjaman barang</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="{{ route('l_ruangan.index') }}" class="menu-link">
+                    <div data-i18n="Alerts">laporan peminjaman ruangan</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="{{ route('lm_barang.index') }}" class="menu-link">
+                    <div data-i18n="Badges">laporan maintenance barang</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="{{ route('lm_ruangan.index') }}" class="menu-link">
+                    <div data-i18n="Buttons">laporan maintenance ruangan</div>
+                  </a>
+                </li>
+                
+                
+                
+              </ul>
+            </li>
+            <!-- Components -->
+           
+         
+          
+          </ul>
+        </aside>
+

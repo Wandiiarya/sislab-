@@ -8,10 +8,7 @@
 <div class="container mt-10">
     <div class="row page-titles mx-0">
         <div class="col-sm-12 p-md-0">
-            <div class="welcome-text">
-              <h4>Tables / Merk</h4>
-            </div>
-        </div>
+               </div>
     </div>
 </div>
 <div class="container">

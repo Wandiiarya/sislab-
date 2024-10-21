@@ -26,30 +26,65 @@
 @extends('layouts.admin')
 @section('content')
 
-    <div class="row">
-              <div class="col-md-12 grid-margin">
-                <div class="row">
-                  <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                    <h3 class="font-weight-bold">Selamat datang  </h3>
-                    <h6 class="font-weight-normal mb-0">Selamat bekerja , semoga menyenangkan harimu</h6>
-                  </div>
-                  <div class="col-12 col-xl-4">
-                    <div class="justify-content-end d-flex">
-         
+   
+            <div class="row www">
+              <div class="col-md-5 grid-margin stretch-card">
+                <!-- Bootstrap carousel -->
+                <div class="col-md">
+                     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExample"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExample"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExample"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
                     </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="d-block w-100" src="../assets/img/elements/13.jpg" alt="First slide" />
+                        <div class="carousel-caption d-none d-md-block">
+                          <h3>First slide</h3>
+                          <p>Eos mutat malis maluisset et, agam ancillae quo te, in vim congue pertinacia.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/elements/2.jpg" alt="Second slide" />
+                        <div class="carousel-caption d-none d-md-block">
+                          <h3>Second slide</h3>
+                          <p>In numquam omittam sea.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/elements/18.jpg" alt="Third slide" />
+                        <div class="carousel-caption d-none d-md-block">
+                          <h3>Third slide</h3>
+                          <p>Lorem ipsum dolor sit amet, virtute consequat ea qui, minim graeco mel no.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </a>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 grid-margin stretch-card">
-                <div class="card tale-bg">
-                  <div class="card-people mt-auto">
-                    <img src="assets/images/dashboard/people.svg" alt="people">
-                    <div class="weather-info">
-                    </div>
-                  </div>
-                </div>
+                <!-- Bootstrap crossfade carousel -->
               </div>
               <div class="col-md-6 grid-margin transparent">
                 <div class="row">
